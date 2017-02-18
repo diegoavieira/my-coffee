@@ -6,13 +6,9 @@ var sequelize = new Sequelize('cafeappdb', 'postgres', '12345', {
   schema: 'public'
 });
 
-module.exports = function() {
-  var db = {};
-  db.user = sequelize.import('./models/user');
-  db.product = sequelize.import('./models/product');
-  db.sale = sequelize.import('./models/sale');
-  return db;
-}
+var db = {};
+db.user = sequelize.import('../database/models/user');
+//add models here
 
 sequelize.authenticate()
   .then(function() {
@@ -27,3 +23,5 @@ sequelize.authenticate()
       console.log('Database not connected: ', err);
     }
   );
+
+  module.exports = db;

@@ -1,7 +1,11 @@
 var express = require('express');
+var app = express();
+var load = require('express-load');
 
-module.exports = function() {
-  var app = express();
-  app.get(express.static('/public'));
-  return app;
-}
+app.use(express.static('/public'));
+
+load('controllers', {cwd: 'app'})
+  .then('routes')
+  .into(app);
+
+module.exports = app;

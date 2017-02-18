@@ -3,4 +3,4 @@
 
 ### Install into root directory:
 - npm install
-- bower install (You should have installed global bower: bower install -g)
+- bower install (You should have installed global bower: "npm install bower -g")

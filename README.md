@@ -1,2 +1,2 @@
 # Basic structure
-## Using nodejs, express, sequelize, socket.io, postgres and angular
+## Using nodejs, express, sequelize, socket.io, postgres, bower and angular

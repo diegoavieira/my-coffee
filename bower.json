@@ -1,0 +1,21 @@
+{
+  "name": "basic-structure",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Diego Vieira <diegoavieira@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/diegoavieira/basic-structure",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3",
+    "angular-route": "1.3"
+  }
+}

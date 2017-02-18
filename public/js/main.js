@@ -1,4 +1,4 @@
-angular.module('main', ['ngRoute']).config(function($routeProvider) {
+angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider) {
 
   $routeProvider.when('/users', {
     templateUrl: 'partials/user.html',

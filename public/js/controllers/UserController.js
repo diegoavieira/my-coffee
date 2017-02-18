@@ -1,10 +1,10 @@
-angular.module('main').controller('UserController', function($scope, $http) {
+angular.module('main').controller('UserController', function($scope, User) {
+
   $scope.title = 'Structure Basic';
 
-  $http.get('/user-list').success(function(data) {
+  User.query(function(data) {
     $scope.users = data;
-    console.log(data);
-  }).error(function(error) {
-    console.log(error);
+  },function(err) {
+    console.log(err);
   });
 });

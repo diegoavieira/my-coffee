@@ -1,6 +1,7 @@
 module.exports = function(app) {
   var controller = app.controllers.user;
 
-  app.route('/user-list')
+  app.route('/users')
     .get(controller.userList);
+
 }

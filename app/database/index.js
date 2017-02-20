@@ -17,7 +17,7 @@ db.user = sequelize.import('../database/models/user');
 sequelize.authenticate()
   .then(function() {
       console.log('Connection with database successfully!');
-      sequelize.sync({force: true}).then(function(data) {
+      sequelize.sync().then(function(data) {
         console.log('Synchronized models successfully!')
       }).catch(function(err) {
         console.log('Models not synchronized: ', err.message);

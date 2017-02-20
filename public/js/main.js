@@ -5,5 +5,25 @@ angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider
     controller: 'UserController'
   });
 
-  $routeProvider.otherwise({redirectTo: '/users'});
+  $routeProvider.when('/', {
+    templateUrl: 'partials/index.html',
+    controller: 'IndexController'
+  });
+
+  $routeProvider.when('/account/signup', {
+    templateUrl: 'partials/signup.html',
+    controller: 'SignUpController'
+  });
+
+  $routeProvider.when('/account/signin', {
+    templateUrl: 'partials/signin.html',
+    controller: 'SignInController'
+  });
+
+  $routeProvider.when('/account', {
+    templateUrl: 'partials/account.html',
+    controller: 'AccountController'
+  });
+
+  $routeProvider.otherwise({redirectTo: '/'});
 });

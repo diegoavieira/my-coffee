@@ -1,10 +1,5 @@
-angular.module('main').controller('UserController', function($scope, User) {
+angular.module('main').controller('UserController', function($scope, User, Service) {
 
-  $scope.title = 'Structure Basic';
+  $scope.title = Service.user.data.name;
 
-  User.query(function(data) {
-    $scope.users = data;
-  },function(err) {
-    console.log(err);
-  });
 });

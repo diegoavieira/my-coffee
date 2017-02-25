@@ -1,4 +1,4 @@
-var sequelize = require('../database/sequelize');
+var sequelize = require('../database/sequelize/connection');
 
 var db = {};
 //models

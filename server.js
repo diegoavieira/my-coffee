@@ -1,6 +1,6 @@
 var app = require('./config/express');
 var http = require('http').Server(app);
-var sequelize = require('./app/database/sequelize');
+var sequelize = require('./app/database/sequelize/connection');
 
 // http.listen(3000, function() {
 //   console.log('Server listening at port 3000');

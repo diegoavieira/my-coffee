@@ -9,7 +9,6 @@ angular.module('main').controller('SignInController', function($scope, Service, 
         $location.path('/account');
         $scope.$apply();
       } else {
-        console.log(ret)
         $scope.message = 'The email address or password you entered is incorrect.'
         $scope.$apply();
       }

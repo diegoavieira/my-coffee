@@ -6,8 +6,8 @@ angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider
   });
 
   $routeProvider.when('/', {
-    templateUrl: 'partials/index.html',
-    controller: 'IndexController'
+    templateUrl: 'partials/main.html',
+    controller: 'MainController'
   });
 
   $routeProvider.when('/account/signup', {

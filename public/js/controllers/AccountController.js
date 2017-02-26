@@ -5,6 +5,8 @@ angular.module('main').controller('AccountController', function($scope, Service,
   }
 
   $scope.logoutAccount = function() {
+		Service.data.logged = false;
+		Service.data.user = {};
     $location.path('/account/signin');
   }
 

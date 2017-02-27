@@ -1,13 +1,8 @@
 angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider) {
 
-  $routeProvider.when('/users', {
-    templateUrl: 'views/partials/user.html',
-    controller: 'UserController'
-  });
-	
   $routeProvider.when('/', {
-    templateUrl: 'views/partials/main.html',
-    controller: 'MainController'
+    templateUrl: 'views/partials/intro.html',
+    controller: 'IntroController'
   });
 
   $routeProvider.when('/account/signup', {

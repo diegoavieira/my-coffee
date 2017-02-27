@@ -1,13 +1,13 @@
 angular.module('main').controller('AccountController', function($scope, Service, $location) {
 
   if(!Service.data.logged) {
-    $location.path('/account/signin');
+    $location.path('/');
   }
 
   $scope.logoutAccount = function() {
 		Service.data.logged = false;
 		Service.data.user = {};
-    $location.path('/account/signin');
+    $location.path('/');
   }
 
   $scope.account = Service.data.user;

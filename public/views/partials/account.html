@@ -1,0 +1,25 @@
+<h4>Welcome {{account.name}}</h4>
+<button ng-click="logoutAccount()">Log Out</button>
+<br><br>
+<h1>Choose and make your coffee!</h1>
+<form name="formCoffee" novalidate>
+
+	<button type="button" ng-click="getType(type)" ng-repeat="type in type">{{type.value}}</button>
+
+	<div class="type">
+		{{typeValue}}
+		<div class="liquid"></div>
+	</div>
+
+	<p>Cup size of coffee:
+		<button type="button" ng-click="getCup(cup)" ng-repeat="cup in cup">{{cup.value}}</button>
+		{{cupValue}}
+	</p>
+
+	<p>Do you want sugar?
+		<button type="button" ng-click="getSugar(sugar)" ng-repeat="sugar in sugar">{{sugar.value}}</button>
+		{{sugarValue}}
+	</p>
+
+	<button type="submit" ng-click="makeCoffee()">Make your coffee</button>
+</form>

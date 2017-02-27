@@ -2,20 +2,34 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.btn {
+.content {
+	background-color: #0f0f0f;
+	color: #DCCCAA;
+}
+
+.column {
+	max-width: 400px;
+}
+
+.button {
+	display: inline-block;
 	padding: 10px 20px;
-	font-size: 16px;
-	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
 	transition: background-color 0.5s;
 }
 
-.btn:hover {
-	background-color: rgba(255, 255, 255, 0.4);
+.button:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn-white {
-	border: 1px solid #fff;
-	color: #fff;
+.button-slave {
+	border: 0.5px solid #DCCCAA;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.button-primary {
+	color: #DCCCAA;
 }
 
 .link {
@@ -28,7 +42,7 @@ body {
 
 .header {
 	padding: 20px 30px;
-	background-color: #2C0402;
+	margin-bottom: 50px;
 }
 
 .header img {
@@ -38,12 +52,27 @@ body {
 
 .menu a {
 	font-size: 16px;
-	margin-left: 20px;
-	color: #fff;
+	margin-left: 25px;
 }
 
-.intro {
-	background-color: #0f0f0f;
+.menu a:last-child {
+	padding: 10px 15px;
+	border: 0.5px solid;
+}
+
+.title {
+	line-height: 1.3;
+	margin-bottom: 30px;
+}
+
+.title h1 {
+	font-size: 38px;
+}
+
+.title h2 {
+	margin-top: 20px;
+	font-size: 26px;
+	color: #ECC87A;
 }
 
 .intro img {
@@ -51,10 +80,14 @@ body {
 	animation: introAnime 3s;
 }
 
-.signup {
-	background-color: #CF7F26;
-	color: #fff;
+.home-anime img {
+	width: 250px;
 }
+
+.signup {
+
+}
+
 
 .type {
 	width: 200px;

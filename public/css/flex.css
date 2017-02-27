@@ -1,7 +1,3 @@
-.content {
-	width: 100%;
-	height: 100%;
-}
 
 .flex {
 	display: flex;
@@ -18,6 +14,11 @@
 	justify-content: center;
 }
 
+.bottom-center {
+	align-items: flex-end;
+	justify-content: center;
+}
+
 .center-between {
 	align-items: center;
 	justify-content: space-between;
@@ -26,4 +27,15 @@
 .center-around {
 	align-items: center;
 	justify-content: space-around;
+}
+
+.column {
+	margin: 10px 30px;
+}
+
+@media screen and (min-width: 1024px) {
+	.content {
+		width: 100%;
+		height: 100%;
+	}
 }

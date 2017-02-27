@@ -5,6 +5,11 @@ angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider
     controller: 'IntroController'
   });
 
+	$routeProvider.when('/home', {
+    templateUrl: 'views/partials/home.html',
+    controller: 'HomeController'
+  });
+
   $routeProvider.when('/account/signup', {
     templateUrl: 'views/partials/signup.html',
     controller: 'SignUpController'

@@ -12,20 +12,20 @@ angular.module('main').controller('AccountController', function($scope, Service,
 
   $scope.account = Service.data.user;
 
-	$scope.type = [
+	$scope.typeCoffee = [
 		{id: 1, value: 'Simple'},
 		{id: 2, value: 'Espresso'},
 		{id: 3, value: 'Cappuccino'},
 		{id: 4, value: 'Macchiato'}
 	]
 
-	$scope.cup = [
+	$scope.cupSize = [
 		{id: 1, value: 'Small'},
 		{id: 2, value: 'Middle'},
 		{id: 3, value: 'Big'}
 	]
 
-	$scope.sugar = [
+	$scope.sugarQtd = [
 		{id: 1, value: 'Nope'},
 		{id: 2, value: 'Little'},
 		{id: 3, value: 'Normal'},
@@ -34,23 +34,32 @@ angular.module('main').controller('AccountController', function($scope, Service,
 
 	$scope.coffee = {}
 
-	$scope.getType = function(value) {
-		$scope.typeValue = value;
-		$scope.coffee.type = value;
+	$scope.getTypeCoffee = function(value) {
+		$scope.typeCoffeeValue = value;
+		$scope.coffee.typeCoffee = value;
 	}
 
-	$scope.getCup = function(value) {
-		$scope.cupValue = value;
-		$scope.coffee.cup = value;
+	$scope.getCupSize = function(value) {
+		$scope.cupSizeValue = value;
+		$scope.coffee.cupSize = value;
 	}
 
-	$scope.getSugar = function(value) {
-		$scope.sugarValue = value;
-		$scope.coffee.sugar = value;
+	$scope.getSugarQtd = function(value) {
+		$scope.sugarQtdValue = value;
+		$scope.coffee.sugarQtd = value;
 	}
 
 	$scope.makeCoffee = function() {
 		$scope.coffee.user = $scope.account;
+		socket.emit('makeCoffee', $scope.coffee, function(ret) {
+      if (ret.success) {
+        console.log(ret);
+        $scope.$apply();
+      } else {
+        console.log(ret);
+        $scope.$apply();
+      }
+    });
 		console.log($scope.coffee);
 	}
 });

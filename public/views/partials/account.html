@@ -4,21 +4,23 @@
 <h1>Choose and make your coffee!</h1>
 <form name="formCoffee" novalidate>
 
-	<button type="button" ng-click="getType(type)" ng-repeat="type in type">{{type.value}}</button>
+	<p>Coffee type:
+		<button type="button" ng-click="getTypeCoffee(type)" ng-repeat="type in typeCoffee">{{type.value}}</button>
+	</p>
 
 	<div class="type">
-		{{typeValue}}
+		{{typeCoffeeValue}}
 		<div class="liquid"></div>
 	</div>
 
 	<p>Cup size of coffee:
-		<button type="button" ng-click="getCup(cup)" ng-repeat="cup in cup">{{cup.value}}</button>
-		{{cupValue}}
+		<button type="button" ng-click="getCupSize(cup)" ng-repeat="cup in cupSize">{{cup.value}}</button>
+		{{cupSizeValue}}
 	</p>
 
 	<p>Do you want sugar?
-		<button type="button" ng-click="getSugar(sugar)" ng-repeat="sugar in sugar">{{sugar.value}}</button>
-		{{sugarValue}}
+		<button type="button" ng-click="getSugarQtd(sugar)" ng-repeat="sugar in sugarQtd">{{sugar.value}}</button>
+		{{sugarQtdValue}}
 	</p>
 
 	<button type="submit" ng-click="makeCoffee()">Make your coffee</button>

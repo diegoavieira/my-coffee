@@ -22,7 +22,6 @@ exports.initialize = function(server) {
   	});
 
 		socket.on('signup', function(signup, callback) {
-			console.log(signup)
 			db.user.create({
         email: signup.email,
         name: signup.name,
@@ -57,6 +56,27 @@ exports.initialize = function(server) {
           });
         }
   		});
+  	});
+
+		socket.on('makeCoffee', function(coffee, callback) {
+			db.coffee.create({
+        typeCoffee: coffee.typeCoffee.value,
+        cupSize: coffee.cupSize.value,
+        sugarQtd: coffee.sugarQtd.value,
+				idUser: coffee.user.idUser
+      }).then(function(data) {
+				callback({
+          success: true,
+          data: data
+        });
+        console.log('Coffee made whith success!');
+      }).catch(function(err) {
+				callback({
+          success: true,
+          err: err
+        });
+				console.log('Coffee error.');
+      });
   	});
 
   });

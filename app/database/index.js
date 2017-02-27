@@ -3,9 +3,9 @@ var sequelize = require('../database/sequelize/connection');
 var db = {};
 //models
 db.user = sequelize.import('./models/user');
-// db.sale = sequelize.import('../database/models/sale');
+db.coffee = sequelize.import('./models/coffee');
 
 //models relations
-// db.sale.belongsTo(db.user, {foreignKey: 'userId'});
+db.coffee.belongsTo(db.user, {foreignKey: 'idUser'});
 
 module.exports = db;

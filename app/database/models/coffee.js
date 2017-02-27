@@ -1,28 +1,31 @@
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('user', {
-    idUser: {
+  return sequelize.define('coffee', {
+    idCoffee: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+		idUser: {
+			type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    typeCoffee: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    email: {
+    cupSize: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    pass: {
+    sugarQtd: {
       type: DataTypes.STRING,
       allowNull: false
     }
   },
   {
     schema:"public",
-    tableName:"user",
-    createdAt: false,
+    tableName:"coffee",
     updatedAt: false
   });
 }

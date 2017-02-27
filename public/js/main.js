@@ -4,7 +4,7 @@ angular.module('main', ['ngRoute', 'ngResource']).config(function($routeProvider
     templateUrl: 'views/partials/user.html',
     controller: 'UserController'
   });
-
+	
   $routeProvider.when('/', {
     templateUrl: 'views/partials/main.html',
     controller: 'MainController'

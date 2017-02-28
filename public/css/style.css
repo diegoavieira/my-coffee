@@ -7,10 +7,6 @@ body {
 	color: #DCCCAA;
 }
 
-.column {
-	max-width: 400px;
-}
-
 .button {
 	display: inline-block;
 	padding: 10px 20px;
@@ -40,9 +36,12 @@ body {
 	opacity: 0.8;
 }
 
+.header-include {
+	margin-bottom: 100px;
+}
+
 .header {
 	padding: 20px 30px;
-	margin-bottom: 50px;
 }
 
 .header img {
@@ -80,14 +79,46 @@ body {
 	animation: introAnime 3s;
 }
 
-.home-anime img {
-	width: 250px;
+.home-anime {
+	position: relative;
 }
+
+.home-anime .mask {
+	position: absolute;
+	bottom: 0px;
+	z-index: 99;
+}
+
+.home-anime .liquid {
+	position: absolute;
+	bottom: 0px;
+	height: 0;
+	width: 100%;
+	animation: liquidAnime 10s forwards;
+	z-index: 9;
+}
+
+.home-anime .front {
+	width: 100%;
+	z-index: 999;
+}
+
+.home-anime .back {
+	position: absolute;
+	width: 100%;
+}
+
+/*.home {
+background-image: linear-gradient(rgba(15,15,15,0.7),rgba(15,15,15,1)), url(../img/back-coffee.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+}*/
 
 .signup {
 
 }
-
 
 .type {
 	width: 200px;

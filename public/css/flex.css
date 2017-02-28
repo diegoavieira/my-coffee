@@ -1,4 +1,3 @@
-
 .flex {
 	display: flex;
   flex-flow: row wrap;
@@ -29,11 +28,33 @@
 	justify-content: space-around;
 }
 
+.stretch-center {
+	align-items: stretch;
+	justify-content: center;
+}
+
 .column {
-	margin: 10px 30px;
+	margin: 30px;
+}
+
+.column-600 {
+	max-width: 600px;
+}
+
+.column-500 {
+	max-width: 500px;
+}
+
+.column-300 {
+	max-width: 300px;
 }
 
 @media screen and (min-width: 1024px) {
+	.wrapp {
+		width: 100%;
+		height: 100%;
+	}
+
 	.content {
 		width: 100%;
 		height: 100%;

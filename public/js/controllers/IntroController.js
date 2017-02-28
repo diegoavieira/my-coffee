@@ -3,6 +3,6 @@ angular.module('main').controller('IntroController', function($scope, Service, $
 	setTimeout(function() {
 		$location.path('/home');
 		$scope.$apply();
-	}, 6000);
+	}, 3000);
 
 });

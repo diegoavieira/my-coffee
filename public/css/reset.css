@@ -7,8 +7,9 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 
 html, body {
 	box-sizing: border-box;
-	height: 100%;
+	height: 100vh;
 	line-height: 1;
+	font-size: 16px;
 }
 
 article, section, header, footer, nav {
@@ -18,4 +19,10 @@ article, section, header, footer, nav {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+@media screen and (max-width: 569px) {
+	body, html {
+		font-size: 10px;
+	}
 }

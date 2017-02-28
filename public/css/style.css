@@ -2,15 +2,15 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 
-.content {
-	background-color: #0f0f0f;
+.wrap {
 	color: #DCCCAA;
+	background-color: #0f0f0f;
 }
 
 .button {
 	display: inline-block;
 	padding: 10px 20px;
-	font-size: 20px;
+	font-size: 24px;
 	background-color: rgba(255, 255, 255, 0.1);
 	transition: background-color 0.5s;
 }
@@ -41,6 +41,11 @@ body {
 }
 
 .header {
+	position: absolute;
+	width: 100%;
+}
+
+.header header {
 	padding: 20px 30px;
 }
 
@@ -61,60 +66,65 @@ body {
 
 .title {
 	line-height: 1.3;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
+	text-align: center;
 }
 
 .title h1 {
-	font-size: 38px;
+	font-size: 42px;
 }
 
 .title h2 {
 	margin-top: 20px;
-	font-size: 26px;
+	font-size: 30px;
 	color: #ECC87A;
 }
 
-.intro img {
+.intro .logo-intro {
 	width: 350px;
 	animation: introAnime 3s;
 }
 
-.home-anime {
+.intro .cup-anime {
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+.cup-anime {
 	position: relative;
 }
 
-.home-anime .mask {
+.cup-anime .mask {
 	position: absolute;
 	bottom: 0px;
 	z-index: 99;
 }
 
-.home-anime .liquid {
+.cup-anime .liquid {
 	position: absolute;
 	bottom: 0px;
 	height: 0;
 	width: 100%;
-	animation: liquidAnime 10s forwards;
+	animation: liquidAnime 8s forwards;
 	z-index: 9;
 }
 
-.home-anime .front {
+.cup-anime .front {
 	width: 100%;
 	z-index: 999;
 }
 
-.home-anime .back {
+.cup-anime .back {
 	position: absolute;
 	width: 100%;
 }
 
-/*.home {
-background-image: linear-gradient(rgba(15,15,15,0.7),rgba(15,15,15,1)), url(../img/back-coffee.png);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height: 100%;
-}*/
+.home {
+	background-image: linear-gradient(rgba(15,15,15,0.8),rgba(15,15,15,1)), url(../img/back-coffee.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .signup {
 
@@ -125,4 +135,10 @@ height: 100%;
 	height: 250px;
 	border: 1px solid #000;
 	margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+	.content {
+		padding: 90px 0;
+	}
 }

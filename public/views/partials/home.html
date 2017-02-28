@@ -1,20 +1,21 @@
-<div class="content home">
-<div class="header-include" ng-include="'views/includes/header.html'"></div>
-	<div class="flex bottom-center">
-		<div class="column column-300">
-			<div class="home-anime flex bottom-center">
-				<img class="mask" src="img/espresso-mask.svg" alt="Espresso mask">
-				<img class="liquid" src="img/espresso-liquid.svg" alt="Espresso liquid">
-				<img class="front" src="img/espresso-front.svg" alt="Espresso front">
-				<img class="back" src="img/espresso-back.svg" alt="Espresso back">
-			</div>
-		</div>
-		<div class="column column-500">
+<div class="wrap">
+	<div class="header" ng-controller="HeaderController" ng-include="'views/includes/header.html'"></div>
+	<div class="content home flex center">
+		<div class="column column-800 flex center slide-anime">
 			<div class="title">
-				<h1>The best self-service coffee in the world.</h1>
+				<h1>Welcome to the best self-service coffee in the world.</h1>
 				<h2>Sign up and make your coffee!</h2>
 			</div>
 			<a class="button button-primary" href="#/account/signup">Make now!</a>
 		</div>
 	</div>
 </div>
+
+<!-- <div class="column column-300">
+	<div class="cup-anime flex bottom-center">
+		<img class="mask" src="img/espresso-mask.svg" alt="Espresso mask">
+		<img class="liquid" src="img/espresso-liquid.svg" alt="Espresso liquid">
+		<img class="front" src="img/espresso-front.svg" alt="Espresso front">
+		<img class="back" src="img/espresso-back.svg" alt="Espresso back">
+	</div>
+</div> -->

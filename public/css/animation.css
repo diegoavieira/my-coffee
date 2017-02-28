@@ -11,3 +11,14 @@
 	70% {height: 100%;}
 	100% {height: 100%;}
 }
+
+@keyframes slideAnime {
+	from {left: -5%;}
+	to {left: 0;}
+}
+
+.slide-anime {
+	animation: slideAnime 1s forwards;
+	position: relative;
+	left: 0;
+}

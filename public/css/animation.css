@@ -17,8 +17,20 @@
 	to {left: 0;}
 }
 
+@keyframes slideUp {
+	from {bottom: 0;}
+	to {bottom: 5%;}
+}
+
+.slide-up {
+	animation: slideUp 1s forwards;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
 .slide-anime {
-	animation: slideAnime 1s forwards;
+	animation: slideAnime 1s forwards linear;
 	position: relative;
 	left: 0;
 }

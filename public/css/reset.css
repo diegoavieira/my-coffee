@@ -21,6 +21,21 @@ a {
 	color: inherit;
 }
 
+button {
+	cursor: pointer;
+}
+
+button, input {
+	border: none;
+	font: inherit;
+	color: inherit;
+	line-height: inherit;
+}
+
+button:focus, input:focus {
+	outline: none;
+}
+
 @media screen and (max-width: 569px) {
 	body, html {
 		font-size: 10px;

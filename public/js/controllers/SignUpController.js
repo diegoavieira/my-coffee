@@ -7,7 +7,7 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
 	$scope.userExist = function() {
 		$scope.showLogin = false;
 	}
-	
+
   $scope.signupNext = function() {
     socket.emit('signupCheck', $scope.signup, function(ret){
       if(ret.success) {
@@ -36,22 +36,23 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
 		  }
 		});
 	}
-}).directive('pwCheck', function() {
-    return {
-			require: "ngModel",
-        scope: {
-          otherModelValue: "=pwCheck"
-        },
-        link: function(scope, element, attributes, ngModel) {
-          ngModel.$validators.pwCheck = function(modelValue) {
-            return modelValue == scope.otherModelValue;
-          };
-
-          scope.$watch("otherModelValue", function() {
-            ngModel.$validate();
-          }
-				);
-      }
-    }
-	}
-);
+});
+// .directive('pwCheck', function() {
+//     return {
+// 			require: "ngModel",
+//         scope: {
+//           otherModelValue: "=pwCheck"
+//         },
+//         link: function(scope, element, attributes, ngModel) {
+//           ngModel.$validators.pwCheck = function(modelValue) {
+//             return modelValue == scope.otherModelValue;
+//           };
+//
+//           scope.$watch("otherModelValue", function() {
+//             ngModel.$validate();
+//           }
+// 				);
+//       }
+//     }
+// 	}
+// );

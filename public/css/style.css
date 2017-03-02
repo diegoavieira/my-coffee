@@ -25,6 +25,10 @@ body {
 	transition: opacity 0.5s;
 }
 
+.button-small {
+	font-size: 1em;
+}
+
 .button:hover {
 	opacity: 1;
 }
@@ -88,6 +92,7 @@ body {
 	text-align: center;
 	display: inline-block;
 	font-size: 1.5em;
+	padding: 9px 0;
 }
 
 .icon-alert .fa-check {
@@ -107,15 +112,13 @@ body {
 }
 
 .box-alert {
-	width: 100%;
-	padding: 1em 0;
-	background-color: rgba(255, 255, 255, 0.2);
+	margin-top: 2em;
 }
 
-.box-alert span {
-	line-height: 1.5em;
-	font-size: 1.5em;
-	margin: 10px;
+.box-alert > * {
+	line-height: 1em;
+	font-size: 1em;
+	margin: 5px;
 }
 
 .responsive {

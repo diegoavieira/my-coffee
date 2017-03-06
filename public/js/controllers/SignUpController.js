@@ -1,7 +1,5 @@
 angular.module('main').controller('SignUpController', function($scope, Service, $location) {
 
-  $scope.subtitle = 'Please enter your email';
-
 	$scope.autofocus = 'autofocus';
 
 	$scope.userExist = function() {
@@ -15,7 +13,6 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
         $scope.showLogin = true;
         $scope.$apply();
       } else {
-        $scope.subtitle = 'Complete your account details';
         $scope.showField = true;
 				$scope.showLogin = false;
 				$scope.emailDisabled = true;

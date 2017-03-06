@@ -1,7 +1,7 @@
 @keyframes introAnime {
-	0% {width: 200px;}
-	10% {width: 350px;}
-	100% {width: 350px;}
+	0% {width: 180px;}
+	10% {width: 200px;}
+	100% {width: 200px;}
 }
 
 @keyframes liquidAnime {

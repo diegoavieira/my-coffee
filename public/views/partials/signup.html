@@ -1,14 +1,12 @@
-<div class="wrap">
-	<div ng-controller="HeaderController" ng-include="'views/includes/header.html'"></div>
-	<div class="content flex center signup">
-		<div class="column column-500">
-			<div class="title">
+<div class="height-full">
+	<header ng-controller="HeaderController" ng-include="'views/includes/header.html'"></header>
+	<article class="signup flex center content">
+		<div class="col-500">
+			<header class="title">
 				<h1>Create your account</h1>
-				<h2>{{subtitle}}</h2>
-			</div>
-			<form class="form" name="form" novalidate class="flex center-left">
-
-				<div class="field-group flex center-left">
+			</header>
+			<form class="form" name="form" novalidate>
+				<div class="field-group">
 					<input class="field" type="email" ng-disabled="emailDisabled" name="email" ng-model="signup.email" placeholder="Email" required ng-attr-autofocus="{{autofocus}}" ng-focus="userExist()">
 					<div ng-if="!form.email.$error.required" ng-show="!form.email.$error.email" class="icon-alert"><i class="fa fa-check"></i></div>
 					<div ng-show="form.email.$error.email" class="icon-alert"><i class="fa fa-exclamation"></i></div>
@@ -17,17 +15,17 @@
 				<button class="button button-green" ng-disabled="form.email.$error.required || form.email.$error.email" ng-hide="showField" ng-click="signupNext(); softShow='soft-show'">Continue</button>
 
 				<div ng-show="showField" ng-class="softShow">
-					<div class="field-group flex center-left">
+					<div class="field-group">
 						<input class="field" type="text" name="name" ng-model="signup.name" placeholder="Full name" required>
 						<div class="icon-alert"><i ng-show="!form.name.$error.required" class="fa fa-check"></i></div>
 					</div>
 
-					<div class="field-group flex center-left">
+					<div class="field-group">
 						<input class="field" type="password" name="pass" ng-model="signup.pass" placeholder="Password" required>
 						<div class="icon-alert"><i ng-show="!form.pass.$error.required" class="fa fa-check"></i></div>
 					</div>
 
-					<div class="field-group flex center-left">
+					<div class="field-group">
 						<input class="field" type="password" name="passCheck" ng-model='signup.passCheck' placeholder="Confirm Password" required pw-check="signup.pass">
 						<div class="icon-alert">
 							<div ng-if="form.pass.$touched">
@@ -42,10 +40,10 @@
 				<button ng-show="showField" class="button button-blue" ng-disabled="form.$invalid" ng-show="showField" ng-click="signupAccount()">Sign up</button>
 
 			</form>
-			<div class="box-alert soft-show flex center-left" ng-show="showLogin">
+			<div class="box-alert soft-show" ng-show="showLogin">
 				<span>Your email address is already in use. Please</span>
 				<a class="button button-small button-blue" ng-href="#/account/signin">Log in</a>
 			</div>
 		</div>
-	</div>
+	</article>
 </div>

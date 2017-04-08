@@ -1,13 +1,12 @@
-<div class="height-full back-coffee-gif">
-	<header ng-controller="HeaderController" ng-include="'views/includes/header.html'"></header>
-	<article class="home flex center content">
-		<div class="col-800 flex center">
-			<header class="title text-center">
-				<h1>Welcome to the best self-service coffee in the world.</h1>
-				<h2>Sign up and make your coffee!</h2>
-			</header>
-			<a ng-click="signupHome()" class="button button-green" href="#/account/signup">Make now!</a>
-		</div>
-	</article>
-</div>
-<footer></footer>
+<div class="back-coffee-gif"></div>
+<div ng-controller="HeaderController" ng-include="'views/includes/header.html'"></div>
+<article class="content home">
+	<div class="fx-col-center">
+		<header class="title text-center">
+			<h1>Welcome to the best self-service coffee in the world.</h1>
+			<h2>Sign up and make your coffee!</h2>
+		</header>
+		<a ng-click="signupHome()" class="button button-green" href="#/account/signup">Make now!</a>
+	</div>
+</article>
+

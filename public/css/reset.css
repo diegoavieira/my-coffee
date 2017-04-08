@@ -30,6 +30,7 @@ button, input {
 	font: inherit;
 	color: inherit;
 	line-height: inherit;
+	box-sizing: border-box;
 }
 
 button:focus, input:focus {
@@ -37,6 +38,12 @@ button:focus, input:focus {
 }
 
 @media screen and (max-width: 569px) {
+	body, html {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-height: 460px) {
 	body, html {
 		font-size: 10px;
 	}

@@ -1,6 +1,8 @@
 angular.module('main').controller('SignUpController', function($scope, Service, $location) {
 
 	$scope.autofocus = 'autofocus';
+  $scope.loading = false;
+  $scope.signup = {};
 
 	$scope.userExist = function() {
 		$scope.showLogin = false;
@@ -8,7 +10,7 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
 
   $scope.signupNext = function() {
     socket.emit('signupCheck', $scope.signup, function(ret){
-      if(ret.success) {
+      if (ret.success) {
         Service.user = ret;
         $scope.showLogin = true;
         $scope.$apply();
@@ -22,10 +24,9 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
   }
 
 	$scope.signupAccount = function() {
-		socket.emit('signup', $scope.signup, function(retCreated) {
-			if(retCreated.success) {
-				Service.user = retCreated;
-				$location.path('/account/signin');
+		socket.emit('signup', $scope.signup, function(ret) {
+			if (ret.success) {
+				signinAccount(ret);
 				$scope.$apply();
 		  } else {
 				$scope.showLogin = true;
@@ -33,23 +34,25 @@ angular.module('main').controller('SignUpController', function($scope, Service, 
 		  }
 		});
 	}
+
+	var signinAccount = function(signup) {
+		var signin = {
+			email: signup.user.email,
+			pass: signup.user.pass
+		}
+    socket.emit('signin', signin, function(ret) {
+      $scope.loading = true;
+      if (ret.success) {
+        Service.data = ret;
+        setTimeout(function() {
+          $location.path('/account');
+          $scope.$apply();
+        }, 2000);
+      } else {
+        $scope.message = 'The email address or password you entered is incorrect.'
+        $scope.$apply();
+      }
+      $scope.$apply();
+    });
+  }
 });
-// .directive('pwCheck', function() {
-//     return {
-// 			require: "ngModel",
-//         scope: {
-//           otherModelValue: "=pwCheck"
-//         },
-//         link: function(scope, element, attributes, ngModel) {
-//           ngModel.$validators.pwCheck = function(modelValue) {
-//             return modelValue == scope.otherModelValue;
-//           };
-//
-//           scope.$watch("otherModelValue", function() {
-//             ngModel.$validate();
-//           }
-// 				);
-//       }
-//     }
-// 	}
-// );

@@ -12,6 +12,7 @@ body {
 
 .content {
 	width: 60%;
+	padding: 8% 0;
 	margin: 0 auto;
 }
 
@@ -97,10 +98,21 @@ body {
 	color: #E86850;
 }
 
+.loading {
+	animation: loading 2s infinite;
+}
+
+@keyframes loading {
+	from {transform: rotate(-360deg)}
+}
+
 .box-alert {
 	margin-top: 15px;
 	font-size: 14px;
-	line-height: 1;
+	line-height: 1.5;
+}
+.box-alert p {
+	margin-bottom: 5px;
 }
 
 .responsive {
@@ -128,7 +140,7 @@ body {
 
 .menu a {
 	font-size: 12px;
-	padding: 16px 8px;
+	padding: 16px 14px;
 	transition: background-color 0.5s;
 }
 
@@ -226,11 +238,7 @@ body {
 	padding: 13% 0;
 }
 
-.signup {
-	padding: 10% 0;
-}
-
-.signup .form {
+.form {
 	width: 50%
 }
 
@@ -255,7 +263,7 @@ body {
 		width: 110px;
 	}
 
-	.signup .form {
+	.form {
 		width: 100%
 	}
 }
@@ -265,7 +273,7 @@ body {
 		padding: 8% 0;
 	}
 
-	.signup .form {
+	.form {
 		width: 80%
 	}
 }

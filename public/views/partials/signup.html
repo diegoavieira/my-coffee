@@ -1,5 +1,5 @@
 <div ng-controller="HeaderController" ng-include="'views/includes/header.html'"></div>
-<article class="content signup">
+<article class="content">
 	<div class="fx-col-center">
 		<header class="title">
 			<h1>Create your account</h1>
@@ -31,12 +31,12 @@
 				</div>
 			</div>
 			
-			<button class="button button-block button-blue" ng-disabled="form.$invalid" ng-show="showField" ng-click="signupAccount()">Sign up</button>
+			<button class="button button-block button-blue" ng-disabled="form.$invalid" ng-show="showField" ng-click="signupAccount()">Sign up <i ng-show="loading" class="fa fa-spinner loading"></i></button>
 
 			<div class="box-alert">
-				<span ng-show="showLogin">Your email address is already in use. <a class="link" ng-href="#/account/signin">Please log in</a></span>
-				<span  class="text-alert" ng-show="form.passCheck.$error.pwCheck && !form.passCheck.$error.required">Confirm password didn't match.</span>
-				<span ng-show="form.email.$error.email" class="text-alert">This is not a valid email.</span>
+				<p ng-show="showLogin">Your email address is already in use. <a class="link" ng-href="#/account/signin">Please log in</a></p>
+				<p  class="text-alert" ng-show="form.passCheck.$error.pwCheck && !form.passCheck.$error.required">Confirm password didn't match.</p>
+				<p ng-show="form.email.$error.email" class="text-alert">This is not a valid email.</p>
 			</div>
 		</form>
 	</div>

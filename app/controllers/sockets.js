@@ -63,7 +63,8 @@ exports.initialize = function(server) {
         typeCoffee: coffee.typeCoffee.value,
         cupSize: coffee.cupSize.value,
         sugarQtd: coffee.sugarQtd.value,
-				idUser: coffee.user.idUser
+				idUser: coffee.user.idUser,
+        created: new Date()
       }).then(function(data) {
 				callback({
           success: true,

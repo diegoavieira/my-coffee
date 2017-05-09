@@ -21,11 +21,15 @@ module.exports = function(sequelize, DataTypes) {
     sugarQtd: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    created: {
+      type: DataTypes.DATE(6),
+      allowNull: false
     }
   },
   {
-    schema:"public",
     tableName:"coffee",
+    createdAt: false,
     updatedAt: false
   });
 }

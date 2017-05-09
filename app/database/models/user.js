@@ -20,7 +20,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   },
   {
-    schema:"public",
     tableName:"user",
     createdAt: false,
     updatedAt: false

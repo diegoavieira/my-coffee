@@ -10,6 +10,20 @@
 	justify-content: center;
 }
 
+.fx-row-wrap-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.fx-row-wrap-start {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+}
+
 .fx-row-between {
 	display: flex;
 	justify-content: space-between;
@@ -20,14 +34,21 @@
 	justify-content: space-around;
 }
 
-.fx-row-end {
+.fx-row-end-center {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .fx-row-start {
 	display: flex;
 	justify-content: flex-start;
+}
+
+.fx-row-start-center {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .fx-row-stretch {

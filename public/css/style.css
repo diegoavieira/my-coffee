@@ -242,11 +242,35 @@ body {
 	width: 50%
 }
 
-.type {
-	width: 200px;
-	height: 250px;
-	border: 1px solid #000;
-	margin-top: 20px;
+.coffee-cup .cup-anime {
+	width: 250px;
+}
+
+.coffee-cup .cup-anime .liquid {
+	animation: initial;
+}
+
+.liquid-anime {
+	animation: liquidAnime 3s forwards !important;
+}
+
+.make-coffee > * {
+	margin-bottom: 15px;
+}
+
+.make-coffee p {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.make-coffee label {
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.make-coffee input[type=radio]{
+  position: absolute;
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {

@@ -58,12 +58,12 @@ exports.initialize = function(server) {
   		});
   	});
 
-		socket.on('makeCoffee', function(coffee, callback) {
+		socket.on('makeCoffee', function(coffeeMaked, callback) {
 			db.coffee.create({
-        typeCoffee: coffee.typeCoffee.value,
-        cupSize: coffee.cupSize.value,
-        sugarQtd: coffee.sugarQtd.value,
-				idUser: coffee.user.idUser,
+        typeCoffee: coffeeMaked.coffee.type,
+        cupSize: coffeeMaked.coffee.cup,
+        sugarQtd: coffeeMaked.coffee.sugar,
+				idUser: coffeeMaked.idUser,
         created: new Date()
       }).then(function(data) {
 				callback({
@@ -73,7 +73,7 @@ exports.initialize = function(server) {
         console.log('Coffee made whith success!');
       }).catch(function(err) {
 				callback({
-          success: true,
+          success: false,
           err: err
         });
 				console.log('Coffee error.');

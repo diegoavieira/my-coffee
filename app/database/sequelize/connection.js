@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('mycoffee', 'root', '12345', {
-  host: 'localhost',
-  dialect: 'mysql'
+var sequelize = new Sequelize('', '', '', {
+  dialect: 'sqlite',
+  storage: 'database.db'
 });
 
 module.exports = sequelize;

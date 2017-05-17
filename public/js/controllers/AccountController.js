@@ -15,6 +15,7 @@ angular.module('main').controller('AccountController', function($scope, Service,
   $scope.resetCoffee = function() {
 		$scope.coffee = {type: 'Espresso', cup: 'Middle', sugar: 'Nope'};
   	$scope.cupAnime = false;
+    $scope.coffeeOk = false;
   }
 
 	$scope.makeCoffee = function(coffee) {
@@ -25,9 +26,9 @@ angular.module('main').controller('AccountController', function($scope, Service,
         console.log(ret.data);
         $scope.cupAnime = true;
         setTimeout(function() {
-        	//$scope.resetCoffee();
+          $scope.coffeeOk = true;
         	$scope.$apply();
-        }, 3500);
+        }, 4500);
         $scope.$apply();
       } else {
         console.log(ret.err);

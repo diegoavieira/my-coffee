@@ -12,30 +12,40 @@
 				<img class="back" src="img/espresso-back.svg" alt="Espresso back">
 			</div>
 		</div>
-		<div class="make-coffee fx-col-center">
-			<p>Choose the options to make your coffee</p>
-			<div class="fx-row-wrap-center">
+		<div ng-hide="coffeeOk" class="make-coffee fx-col-center">
+			<p>Choose the type your coffee</p>
+			<div class="fx-row-between">
 				<input type="radio" name="typeCoffee" id="simple" value="Espresso" ng-model="coffee.type" checked>
 				<label for="simple">Espresso</label>
 				<input type="radio" name="typeCoffee" id="cappuccino" value="Cappuccino" ng-model="coffee.type">
 				<label for="cappuccino">Cappuccino</label>
 				<input type="radio" name="typeCoffee" id="macchiato" value="Macchiato" ng-model="coffee.type">
 				<label for="macchiato">Macchiato</label>
+			</div>
+			<p>What size?</p>
+			<div class="fx-row-between">
 				<input type="radio" name="cupCoffee" id="small" value="Small" ng-model="coffee.cup" checked>
 				<label for="small">Small</label>
 				<input type="radio" name="cupCoffee" id="middle" value="Middle" ng-model="coffee.cup">
 				<label for="middle">Middle</label>
 				<input type="radio" name="cupCoffee" id="large" value="Large" ng-model="coffee.cup">
 				<label for="large">Large</label>
-				<input type="radio" name="sugarCoffee" id="nope" value="Nope" ng-model="coffee.sugar" checked>
-				<label for="nope">Nope sugar</label>
-				<input type="radio" name="sugarCoffee" id="little" value="Little" ng-model="coffee.sugar">
-				<label for="little">Little sugar</label>
-				<input type="radio" name="sugarCoffee" id="mouch" value="Mouch" ng-model="coffee.sugar">
-				<label for="mouch">Mouch sugar</label>
 			</div>
+			<p>Do you want sugar?</p>
+			<div class="fx-row-between">	
+				<input type="radio" name="sugarCoffee" id="nope" value="Nope" ng-model="coffee.sugar" checked>
+				<label for="nope">Nope</label>
+				<input type="radio" name="sugarCoffee" id="little" value="Little" ng-model="coffee.sugar">
+				<label for="little">Little</label>
+				<input type="radio" name="sugarCoffee" id="much" value="Much" ng-model="coffee.sugar">
+				<label for="much">Much</label>
+			</div>
+			<button class="button button-green button-block" ng-click="makeCoffee(coffee)">Make now!</button>
 		</div>
-		<button class="button button-green" ng-click="makeCoffee(coffee)">Make now!</button>
+		<div ng-show="coffeeOk" class="coffee-ok">
+			<h1>Your {{coffee.type | lowercase}} {{coffee.cup | lowercase}} <span ng-show="coffee.sugar !== 'Nope'">with {{coffee.sugar | lowercase}}</span><span ng-show="coffee.sugar === 'Nope'">without</span> sugar is ready!</h1>
+			<button class="button button-blue" ng-click="resetCoffee()">Make a new coffee</button>
+		</div>
 	</div>
 </article>
 

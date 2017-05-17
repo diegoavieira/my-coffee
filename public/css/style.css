@@ -110,6 +110,7 @@ body {
 	margin-top: 15px;
 	font-size: 14px;
 	line-height: 1.5;
+	text-align: center;
 }
 .box-alert p {
 	margin-bottom: 5px;
@@ -140,8 +141,13 @@ body {
 
 .menu a {
 	font-size: 12px;
-	padding: 16px 14px;
+	padding: 16px 1em;
 	transition: background-color 0.5s;
+}
+
+.menu span {
+	font-size: 12px;
+	padding: 16px 1em;
 }
 
 .menu a:hover {
@@ -243,7 +249,7 @@ body {
 }
 
 .account {
-	padding: 3% 0;
+	padding: 2% 0;
 	width: 35%;
 }
 
@@ -271,25 +277,34 @@ body {
 }
 
 .liquid-anime {
-	animation: liquidAnime 3s forwards !important;
+	animation: liquidAnime 5s forwards !important;
 }
 
 .make-coffee {
-	margin: 20px 0;
+	width: 100%;
+	text-align: center;
 }
+
+.make-coffee > * {
+	width: 100%;
+}
+
+.make-coffee .button {
+	margin-top: 20px;
+}
+
 .make-coffee p {
-	margin-bottom: 10px;
-	font-size: 1.2em;
+	margin: 10px 0;
+	font-size: 16px;
 }
 
 .make-coffee label {
 	opacity: 0.7;
 	cursor: pointer;
 	padding: 10px 0;
-	width: 32%;
-  margin: 0.3%;
+	width: calc(98% / 3);
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 18px;
 	transition: opacity 0.5s;
 	background-color: #ECC87A;
   color: #0F0F0F;
@@ -307,13 +322,26 @@ body {
   display: none;
 }
 
+.coffee-ok {
+	text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.coffee-ok h1 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
 @media (max-width: 768px) {
 	.content {
-		width: 90%;
+		width: 85%;
 	}
 
 	.account {
-		width: 90%;
+		width: 85%;
+		padding: 8% 0;
 	}
 
 	.header {
@@ -327,6 +355,10 @@ body {
 
 	.form {
 		width: 100%
+	}
+
+	.make-coffee label {
+		font-size: 14px;
 	}
 }
 

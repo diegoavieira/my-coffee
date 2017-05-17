@@ -11,27 +11,11 @@ angular.module('main').controller('AccountController', function($scope, Service,
   }
 
   $scope.account = Service.data.user;
-	$scope.coffee = {type: 'Espresso', cup: 'Small', sugar: 'Nope'};
 
-	// $scope.typeCoffee = [
-	// 	{id: 1, value: 'Simple'},
-	// 	{id: 2, value: 'Espresso'},
-	// 	{id: 3, value: 'Cappuccino'},
-	// 	{id: 4, value: 'Macchiato'}
-	// ]
-
-	// $scope.cupSize = [
-	// 	{id: 1, value: 'Small'},
-	// 	{id: 2, value: 'Middle'},
-	// 	{id: 3, value: 'Big'}
-	// ]
-
-	// $scope.sugarQtd = [
-	// 	{id: 1, value: 'Nope'},
-	// 	{id: 2, value: 'Little'},
-	// 	{id: 3, value: 'Normal'},
-	// 	{id: 4, value: 'Much'}
-	// ]
+  $scope.resetCoffee = function() {
+		$scope.coffee = {type: 'Espresso', cup: 'Middle', sugar: 'Nope'};
+  	$scope.cupAnime = false;
+  }
 
 	$scope.makeCoffee = function(coffee) {
 		var data = {coffee: coffee, idUser: Service.data.user.idUser};
@@ -40,6 +24,10 @@ angular.module('main').controller('AccountController', function($scope, Service,
       if (ret.success) {
         console.log(ret.data);
         $scope.cupAnime = true;
+        setTimeout(function() {
+        	//$scope.resetCoffee();
+        	$scope.$apply();
+        }, 3500);
         $scope.$apply();
       } else {
         console.log(ret.err);
@@ -47,4 +35,6 @@ angular.module('main').controller('AccountController', function($scope, Service,
       }
     });
 	}
+
+	$scope.resetCoffee();
 });

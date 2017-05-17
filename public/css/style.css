@@ -242,8 +242,28 @@ body {
 	width: 50%
 }
 
+.account {
+	padding: 3% 0;
+	width: 35%;
+}
+
+.coffee-cup {
+	height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .coffee-cup .cup-anime {
-	width: 250px;
+	width: 90%;
+}
+
+.cup-size-small {
+	width: 70% !important;
+}
+
+.cup-size-middle {
+	width: 80% !important;
 }
 
 .coffee-cup .cup-anime .liquid {
@@ -254,27 +274,45 @@ body {
 	animation: liquidAnime 3s forwards !important;
 }
 
-.make-coffee > * {
-	margin-bottom: 15px;
+.make-coffee {
+	margin: 20px 0;
 }
-
 .make-coffee p {
-	width: 100%;
 	margin-bottom: 10px;
+	font-size: 1.2em;
 }
 
 .make-coffee label {
+	opacity: 0.7;
 	cursor: pointer;
-	margin-right: 10px;
+	padding: 10px 0;
+	width: 32%;
+  margin: 0.3%;
+	text-align: center;
+	font-size: 1.2em;
+	transition: opacity 0.5s;
+	background-color: #ECC87A;
+  color: #0F0F0F;
+}
+
+.make-coffee label:hover {
+	opacity: 1;
+}
+
+.make-coffee input:checked + label {
+  opacity: 1;
 }
 
 .make-coffee input[type=radio]{
-  position: absolute;
-  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 768px) {
 	.content {
+		width: 90%;
+	}
+
+	.account {
 		width: 90%;
 	}
 

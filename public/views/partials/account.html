@@ -1,46 +1,38 @@
 <div ng-controller="HeaderController" ng-include="'views/includes/header.html'"></div>
-<article class="content">
+<article class="content account">
 	<div class="fx-col-center">
 		<header class="title">
 			<h1>Make your coffee!</h1>
 		</header>
-		<div class="fx-row-end-center">
-			<div class="make-coffee">
-				<div class="fx-row-wrap-start">
-					<p>Choose the coffee type</p>
-					<label for="simple">Espresso</label>
-					<input type="radio" name="typeCoffee" id="simple" value="Espresso" ng-model="coffee.type">
-					<label for="cappuccino">Cappuccino</label>
-					<input type="radio" name="typeCoffee" id="cappuccino" value="Cappuccino" ng-model="coffee.type">
-					<label for="macchiato">Macchiato</label>
-					<input type="radio" name="typeCoffee" id="macchiato" value="Macchiato" ng-model="coffee.type">
-				</div>
-				<div class="fx-row-wrap-start">
-					<p>What cup size you prefer?</p>
-					<label for="small">Small</label>
-					<input type="radio" name="cupCoffee" id="small" value="Small" ng-model="coffee.cup">
-					<label for="middle">Middle</label>
-					<input type="radio" name="cupCoffee" id="middle" value="Middle" ng-model="coffee.cup">
-					<label for="large">Large</label>
-					<input type="radio" name="cupCoffee" id="large" value="Large" ng-model="coffee.cup">
-				</div>
-				<div class="fx-row-wrap-start">
-					<p>Do you want sugar?</p>
-					<label for="nope">Nope</label>
-					<input type="radio" name="sugarCoffee" id="nope" value="Nope" ng-model="coffee.sugar">
-					<label for="little">Little</label>
-					<input type="radio" name="sugarCoffee" id="little" value="Little" ng-model="coffee.sugar">
-					<label for="mouch">Mouch</label>
-					<input type="radio" name="sugarCoffee" id="mouch" value="Mouch" ng-model="coffee.sugar">
-				</div>
+		<div class="coffee-cup">
+			<div class="cup-anime" ng-class="{'cup-size-small': coffee.cup === 'Small', 'cup-size-middle': coffee.cup === 'Middle'}">
+				<img class="mask" src="img/espresso-mask.svg" alt="Espresso mask">
+				<img ng-class="{'liquid-anime': cupAnime}" class="liquid" src="img/espresso-liquid.svg" alt="Espresso liquid">
+				<img class="front" src="img/espresso-front.svg" alt="Espresso front">
+				<img class="back" src="img/espresso-back.svg" alt="Espresso back">
 			</div>
-			<div class="coffee-cup">
-				<div class="cup-anime">
-					<img class="mask" src="img/espresso-mask.svg" alt="Espresso mask">
-					<img ng-class="{'liquid-anime': cupAnime}" class="liquid" src="img/espresso-liquid.svg" alt="Espresso liquid">
-					<img class="front" src="img/espresso-front.svg" alt="Espresso front">
-					<img class="back" src="img/espresso-back.svg" alt="Espresso back">
-				</div>
+		</div>
+		<div class="make-coffee fx-col-center">
+			<p>Choose the options to make your coffee</p>
+			<div class="fx-row-wrap-center">
+				<input type="radio" name="typeCoffee" id="simple" value="Espresso" ng-model="coffee.type" checked>
+				<label for="simple">Espresso</label>
+				<input type="radio" name="typeCoffee" id="cappuccino" value="Cappuccino" ng-model="coffee.type">
+				<label for="cappuccino">Cappuccino</label>
+				<input type="radio" name="typeCoffee" id="macchiato" value="Macchiato" ng-model="coffee.type">
+				<label for="macchiato">Macchiato</label>
+				<input type="radio" name="cupCoffee" id="small" value="Small" ng-model="coffee.cup" checked>
+				<label for="small">Small</label>
+				<input type="radio" name="cupCoffee" id="middle" value="Middle" ng-model="coffee.cup">
+				<label for="middle">Middle</label>
+				<input type="radio" name="cupCoffee" id="large" value="Large" ng-model="coffee.cup">
+				<label for="large">Large</label>
+				<input type="radio" name="sugarCoffee" id="nope" value="Nope" ng-model="coffee.sugar" checked>
+				<label for="nope">Nope sugar</label>
+				<input type="radio" name="sugarCoffee" id="little" value="Little" ng-model="coffee.sugar">
+				<label for="little">Little sugar</label>
+				<input type="radio" name="sugarCoffee" id="mouch" value="Mouch" ng-model="coffee.sugar">
+				<label for="mouch">Mouch sugar</label>
 			</div>
 		</div>
 		<button class="button button-green" ng-click="makeCoffee(coffee)">Make now!</button>

@@ -1,6 +1,6 @@
 angular.module('main').controller('AccountController', function($scope, Service, $location) {
 
-  if(!Service.data.logged) {
+  if (!Service.data.logged) {
     $location.path('/');
   }
 

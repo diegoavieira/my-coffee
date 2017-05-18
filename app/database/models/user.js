@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
   },
   {
     tableName:"user",
+    schema:"public",
     createdAt: false,
     updatedAt: false
   });

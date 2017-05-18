@@ -1,7 +1,6 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('mycoffee', 'postgres', '12345', {
-  host: '127.0.0.1',
-  dialect: 'postgres'
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+  logging: false
 });
 
 module.exports = sequelize;

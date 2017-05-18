@@ -29,7 +29,6 @@ module.exports = function(sequelize, DataTypes) {
   },
   {
     tableName:"coffee",
-    schema:"public",
     createdAt: false,
     updatedAt: false
   });

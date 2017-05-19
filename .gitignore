@@ -1,2 +1,7 @@
-node_modules
-public/bower
+.tmp
+.DS_Store
+.DS_Store?
+node_modules/
+public/bower/
+dist/
+scripts/

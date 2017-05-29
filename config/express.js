@@ -3,6 +3,7 @@ var app = express();
 var load = require('express-load');
 
 app.use(express.static('./public'));
+app.set('port', process.env.PORT || 3000);
 
 load('controllers', {cwd: 'app'})
   .then('routes')

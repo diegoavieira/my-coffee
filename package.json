@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "postinstall": "bower install",
     "production": "forever app.js"
   },
   "author": "diegoavieira@gmail.com",
@@ -20,6 +19,7 @@
     "socket.io": "^1.7.3"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.7.0"

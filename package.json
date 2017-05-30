@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "production": "forever app.js"
+    "production": "forever app.js",
+    "postinstall": "bower install"
   },
   "author": "diegoavieira@gmail.com",
   "license": "ISC",

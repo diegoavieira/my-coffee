@@ -5,13 +5,15 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "production": "forever app.js"
   },
   "author": "diegoavieira@gmail.com",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.1",
     "express-load": "^1.1.15",
+    "forever": "^0.15.3",
     "mysql": "^2.13.0",
     "pg": "^6.1.2",
     "sequelize": "^3.30.2",
